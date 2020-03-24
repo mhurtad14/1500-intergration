@@ -20,7 +20,7 @@ def get_bmr():
         print("Please try again.")
     return bmr
         
-def get_daily_calorie_requirement():
+def get_daily_calorie_requirement(bmr):
     dcr_1 = 1.2
     dcr_2 = 1.375
     dcr_3 = 1.55
@@ -59,7 +59,7 @@ def main():
     print("5 being super active (very hard exercise and a physical job)")
     print("Exercise would be 15 to 30 minutes of having an elevated heart rate.")
     print("Hard exercise would be 2 plus hours of elevated heart rate.")
-    daily_calorie_requirement = get_daily_calorie_requirement()
+    daily_calorie_requirement = get_daily_calorie_requirement(bmr)
     print("The amount of calories you should be consuming are: ", daily_calorie_requirement)
     print("Now that we have calculated your daily caloric requirement, let's figure out your goals.")
     print("If you are trying to lose weight enter 1, if you are trying to maintain enter 2 or if you are trying to gain weight enter 3.")
@@ -69,37 +69,37 @@ def main():
         print("In order to reach your goal, will keep track of the amount of calories you consume.")
         print("The best way to keep track of your calories is to record the amount of calories consumed after every meal.")
         cal_goal_1 = daily_calorie_requirement - 500
-        cal_comsumed_1 = 0
-        while cal_goal_1 <= cal_consumed_1:
-            cal_taken = int(input("How many calories have was your last meal?")
-            cal_consumed += cal_taken
-        if cal_goal_1 >= cal_consumed_1:
-            print("Congratulations! You have reached your goal for the day!")
+        cal_consumed_1 = 0
+        while cal_goal_1 >= cal_consumed_1:
+            cal_taken = int(input("How many calories have was your last meal?"))
+            cal_consumed_1 += cal_taken
+        if cal_goal_1 <= cal_consumed_1:
+            print("Congratulations! You have reached your goal for the day by taking in", cal_consumed_1, "calories!")
             
     elif goal == 2:
         print("If you are trying to maintain your current level then just continue taking in the same about of calories daily.")
         print("In order to reach your goal, will keep track of the amount of calories you consume.")
         print("The best way to keep track of your calories is to record the amount of calories consumed after every meal.")
         cal_goal_2 = daily_calorie_requirement
-        cal_comsumed_2 = 0
-        while cal_goal_2 <= cal_consumed_2:
-            cal_taken = int(input("How many calories have was your last meal?")
-            cal_consumed += cal_taken
-        if cal_goal_2 == cal_consumed_2:
-            print("Congratulations! You have reached your goal for the day!")
+        cal_consumed_2 = 0
+        while cal_goal_2 >= cal_consumed_2:
+            cal_taken = int(input("How many calories have was your last meal?"))
+            cal_consumed_2 += cal_taken
+        if cal_goal_2 <= cal_consumed_2:
+            print("Congratulations! You have reached your goal for the day", cal_consumed_2, "calories!")
     elif goal == 3:
         print("If you want to bulk up and build lean muscle mass you need to consume 300 to 500 more calories than your daily metabolic requirement")
         print("If you are just starting out, I would suggest you begin with 300 calories as taking more calories than need will lead to fat also being produced.")
         print("In order to reach your goal safely you will have to increase your daily caloric intake by 300 in order to gain one half a pound to half a pound a week")
         print("In order to reach your goal, will keep track of the amount of calories you consume.")
         print("The best way to keep track of your calories is to record the amount of calories consumed after every meal.")
-        cal_goal_3 = daily_calorie_requirement - 300
-        cal_comsumed_3 = 0
-        while cal_goal_3 <= cal_consumed_3:
-            cal_taken = int(input("How many calories have was your last meal?")
-            cal_consumed += cal_taken
-        if cal_goal_3 >= cal_consumed_3:
-            print("Congratulations! You have reached your goal for the day!")
+        cal_goal_3 = daily_calorie_requirement + 300
+        cal_consumed_3 = 0
+        while cal_goal_3 >= cal_consumed_3:
+            cal_taken = int(input("How many calories have was your last meal?"))
+            cal_consumed_3 += cal_taken
+        if cal_goal_3 <= cal_consumed_3:
+            print("Congratulations! You have reached your goal for the day!",cal_consumed_3, "calories!")
     else:
         print("Please try again.")
     
