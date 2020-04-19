@@ -67,16 +67,16 @@ def main():
     print("Hello, welcome to my integration project!")
     print("The purpose of this program is to help the user reach their goal and provide helpful suggestions.")
     print("It will do this by taking your age, gender, height and your level of physical activity in order to"
-          "calculate your Basal Metabolic Rate(BMR)")
+          " calculate your Basal Metabolic Rate(BMR)")
     print("Your BMR is how many calories you burn in a single day. Combining your BMR with your goals we can suggest a"
-          "meal plan and exercises that will help reach your goals")
+          " meal plan and exercises that will help reach your goals")
     print("Let's get started! I will start by asking you a few questions in order to make a profile and give you the"
-          "best informed advice.")
+          " best informed advice.")
     bmr = get_bmr()
     print("Your BMR is: ", bmr)
 
     print("Great! Now that we have calculated your Basal Metabolic Rate, let's calculate your daily calorie"
-          "requirement!")
+          " requirement!")
     print("This is the calories you should be taking in to maintain your current weight")
     print("How active are you on a scale of 1-5?")
     print("1 being  you are sedentary (little to no exercise)")
@@ -90,14 +90,14 @@ def main():
     print("The amount of calories you should be consuming are: ", daily_calorie_requirement)
     print("Now that we have calculated your daily caloric requirement, let's figure out your goals.")
     print("If you are trying to lose weight enter 1, if you are trying to maintain enter 2 or if you are trying to"
-          "gain weight enter 3.")
+          " gain weight enter 3.")
     goal = int(input("What is the goal you are setting for yourself?"))
     if goal == 1:
         print("In order to reach your goal safely you will have to reduce your daily caloric intake by 500 in order to"
-              "lose one pound a week")
+              " lose one pound a week")
         print("In order to reach your goal, will keep track of the amount of calories you consume.")
         print("The best way to keep track of your calories is to record the amount of calories consumed after"
-              "every meal.")
+              " every meal.")
         cal_goal_1 = daily_calorie_requirement - 500
         cal_consumed_1 = 0
         while cal_goal_1 >= cal_consumed_1:
@@ -111,7 +111,7 @@ def main():
               "daily.")
         print("In order to reach your goal, will keep track of the amount of calories you consume.")
         print("The best way to keep track of your calories is to record the amount of calories consumed after"
-              "every meal.")
+              " every meal.")
         cal_goal_2 = daily_calorie_requirement
         cal_consumed_2 = 0
         while cal_goal_2 >= cal_consumed_2:
@@ -121,14 +121,14 @@ def main():
             print("Congratulations! You have reached your goal for the day", cal_consumed_2, "calories!")
     elif goal == 3:
         print("If you want to bulk up and build lean muscle mass you need to consume 300 to 500 more calories than"
-              "your daily metabolic requirement")
+              " your daily metabolic requirement")
         print("If you are just starting out, I would suggest you begin with 300 calories as taking more calories than"
-              "need will lead to fat also being produced.")
+              " need will lead to fat also being produced.")
         print("In order to reach your goal safely you will have to increase your daily caloric intake by 300 in order"
-              "to gain one half a pound to half a pound a week")
+              " to gain one half a pound to half a pound a week")
         print("In order to reach your goal, will keep track of the amount of calories you consume.")
         print("The best way to keep track of your calories is to record the amount of calories consumed after"
-              "every meal.")
+              " every meal.")
         cal_goal_3 = daily_calorie_requirement + 300
         cal_consumed_3 = 0
         while cal_goal_3 >= cal_consumed_3:
